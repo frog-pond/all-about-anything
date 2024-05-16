@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		0043DE362BF555EB003C163A /* AllAboutAnythingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0043DE352BF555EB003C163A /* AllAboutAnythingTests.swift */; };
 		0043DE402BF555EB003C163A /* AllAboutAnythingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0043DE3F2BF555EB003C163A /* AllAboutAnythingUITests.swift */; };
 		0043DE422BF555EB003C163A /* AllAboutAnythingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0043DE412BF555EB003C163A /* AllAboutAnythingUITestsLaunchTests.swift */; };
+		0043DE502BF5582F003C163A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 0043DE4F2BF5582F003C163A /* ComposableArchitecture */; };
+		0043DE532BF6697D003C163A /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 0043DE522BF6697D003C163A /* GRDB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0043DE502BF5582F003C163A /* ComposableArchitecture in Frameworks */,
+				0043DE532BF6697D003C163A /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +149,10 @@
 			dependencies = (
 			);
 			name = AllAboutAnything;
+			packageProductDependencies = (
+				0043DE4F2BF5582F003C163A /* ComposableArchitecture */,
+				0043DE522BF6697D003C163A /* GRDB */,
+			);
 			productName = AllAboutAnything;
 			productReference = 0043DE202BF555EA003C163A /* AllAboutAnything.app */;
 			productType = "com.apple.product-type.application";
@@ -209,7 +217,7 @@
 				};
 			};
 			buildConfigurationList = 0043DE1B2BF555EA003C163A /* Build configuration list for PBXProject "AllAboutAnything" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -217,6 +225,10 @@
 				Base,
 			);
 			mainGroup = 0043DE172BF555EA003C163A;
+			packageReferences = (
+				0043DE4E2BF5582F003C163A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				0043DE512BF6697C003C163A /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			productRefGroup = 0043DE212BF555EA003C163A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -424,6 +436,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "All About Anything";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -462,6 +476,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "All About Anything";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -617,6 +633,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0043DE4E2BF5582F003C163A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.4;
+			};
+		};
+		0043DE512BF6697C003C163A /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				branch = GRDB6;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0043DE4F2BF5582F003C163A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0043DE4E2BF5582F003C163A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		0043DE522BF6697D003C163A /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0043DE512BF6697C003C163A /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0043DE182BF555EA003C163A /* Project object */;
 }
